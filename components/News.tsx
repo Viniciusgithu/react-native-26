@@ -1,9 +1,9 @@
 import { View, Switch, ScrollView, Text, StyleSheet, SafeAreaView, Platform, Image } from "react-native";
-import { useState } from "react";
 import Cards from "./Cards";
+import { useTheme } from "./ThemeContext";
 
 const News: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode, setDarkMode } = useTheme();
 
   const dynamicStyles = getDynamicStyles(darkMode);
 
